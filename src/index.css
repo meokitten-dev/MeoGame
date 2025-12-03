@@ -1,0 +1,67 @@
+/* src/index.css */
+:root {
+  --pastel-pink: #ffd6e7;
+  --pastel-purple: #d9a7ff;
+  --pastel-blue: #a7d4ff;
+  --glass-bg: rgba(255, 255, 255, 0.15);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --text-dark: #5a3a7a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', 'Comic Sans MS', cursive, sans-serif;
+  background: linear-gradient(135deg, #f5d1ff, #e0f7fa, #fff2f7);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px rgba(183, 102, 255, 0.15);
+}
+
+.btn {
+  background: linear-gradient(to right, #ffafd1, #d9a7ff);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-size: 1rem;
+}
+.btn:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 12px rgba(217, 167, 255, 0.4);
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Scrollbar dễ thương */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--pastel-purple);
+  border-radius: 4px;
+}
